@@ -4,6 +4,8 @@ All notable changes to `opencode-websearch-addons` are documented in this file.
 
 ## Unreleased
 
+- Preserve the surrounding generated passage when OpenAI citation annotations cover only a link/marker, with paragraph, list-item, and previous-citation boundaries, shared citations, deduplication, and Unicode-aware marker offsets.
+- Prefer complete terminal SSE output so a final cited answer is not lost when only search items emitted individual done events.
 - Route ChatGPT Token Sharing OAuth to the public Responses API while retaining the legacy Codex endpoint for Codex OAuth.
 - Recognize token-sharing grants by their OpenCode method ID or saved `chatgpt.tokens.use.direct` scope without decoding access tokens or sending Codex account headers.
 - Parse token-sharing SSE responses that omit `Content-Type` and stop reading at the terminal event.
